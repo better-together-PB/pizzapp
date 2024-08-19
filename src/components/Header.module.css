@@ -1,0 +1,137 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: red;
+    padding: 10px 5vw;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.rotatedPizza {
+    display: inline-block;
+    transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+}
+
+.nav {
+    display: flex;
+    gap: 100px;
+    font-size: 20px;
+}
+
+.navLink {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navLink:hover {
+    background-color: rgb(212, 68, 68);
+}
+
+.activeNavLink {
+    color: black;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.cartIcon {
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.cartIcon::after {
+    content: attr(data-items);
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: yellow;
+    color: black;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 1490px) {
+    .header {
+        align-items: flex-start;
+    }
+
+    .nav {
+        gap: 50px;
+        font-size: 15px;
+    }
+
+    .navLink {
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 1210px) {
+    .header {
+        align-items: flex-start;
+    }
+
+    .nav {
+        gap: 10px;
+        font-size: 15px;
+    }
+
+    .navLink {
+        padding: 5px 9px;
+    }
+}
+
+@media (max-width: 920px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        align-items: center;
+    }
+
+    .nav {
+        gap: 1px;
+        font-size: 13px;
+    }
+
+    .navLink {
+        padding: 1px 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        align-items: center;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 1px;
+        align-items: center;
+    }
+
+    .navLink {
+        padding: 1px 2px;
+        align-items: center;
+    }
+
+}

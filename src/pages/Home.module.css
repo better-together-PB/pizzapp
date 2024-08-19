@@ -1,0 +1,36 @@
+.container {
+    height: 1280px;
+    border: 1px solid black;
+    background: url(https://img.getimg.ai/generated/img-zZMYRGKzG2qQKYpuxEW8T.jpeg) no-repeat center center;
+    background-size: cover;
+    background-position: center top;
+    color: red;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+@media (max-width: 1490px) {
+    .container {
+        background-position: center center;
+    }
+}
+
+@media (max-width: 1210px) {
+    .container {
+        background-position: center center;
+    }
+}
+
+@media (max-width: 920px) {
+    .container {
+        background-position: center center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        background-position: center center;
+    }
+}

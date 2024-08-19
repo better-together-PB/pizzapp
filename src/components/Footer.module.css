@@ -1,0 +1,116 @@
+.footer {
+    background-color: rgb(63, 2, 2);
+    color: white;
+    padding: 5px;
+    text-align: center;
+    border-top: 1px solid black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+}
+
+.footer p {
+    margin: 10px 0;
+}
+
+.footer a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.footer a:hover {
+    color: yellow;
+}
+
+.footer p:first-of-type a {
+    color: white;
+}
+
+.footer p:last-of-type {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1490px) {
+    .footer {
+        padding: 1px 1px;
+    }
+
+    .footer p {
+        margin: 1px 0;
+        font-size: 0.8rem;
+    }
+
+
+    .footer a {
+        font-size: 0.9rem;
+    }
+
+    .footer p:last-of-type {
+        font-size: 0.8rem;
+    }
+}
+
+
+@media (max-width: 1210px) {
+    .footer {
+        padding: 1px 1px;
+    }
+
+    .footer p {
+        margin: 1px 0;
+        font-size: 0.8rem;
+    }
+
+
+    .footer a {
+        font-size: 0.9rem;
+    }
+
+    .footer p:last-of-type {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 920px) {
+    .footer {
+        padding: 1px 1px;
+    }
+
+    .footer p {
+        margin: 1px 0;
+        font-size: 0.8rem;
+    }
+
+
+    .footer a {
+        font-size: 0.8rem;
+    }
+
+    .footer p:last-of-type {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 1px 1px;
+    }
+
+    .footer p {
+        margin: 1px 0;
+        font-size: 0.8rem;
+    }
+
+    .footer a {
+        font-size: 0.8rem;
+    }
+
+    .footer p:last-of-type {
+        font-size: 0.6rem;
+    }
+}

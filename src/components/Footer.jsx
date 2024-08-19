@@ -1,14 +1,19 @@
+import styles from "../components/Footer.module.css";
+
 function Footer() {
   return (
-    <footer>
+    <footer className={styles.footer}>
       <p>
-        <a href="#">Checkout</a> the github repository for our app
+        Checkout the{" "}
+        <a href="https://github.com/better-together-PB/pizzapp">GitHub</a>{" "}
+        repository for our app Creators{" "}
+        <a href="https://github.com/Kisyov92">🇧🇬 Atanas Kisyov</a>{" "}
+        <a href="https://github.com/Goncaloduarte-23">Gonçalo Duarte 🇵🇹</a>
       </p>
       <p>
-        Creators - <a href="#">Atanas Kisyov</a>
-        <a href="#">NAME</a>
+        Copyright © {new Date().getFullYear()} Pizza Palace - All rights
+        reserved
       </p>
-      <p>Copyright © {new Date().getFullYear()} PizzApp - All right reserved</p>
     </footer>
   );
 }
