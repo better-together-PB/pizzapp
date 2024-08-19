@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-function Pizza({ name, image, ingredients, price }) {
+function Pizza({ id, name, image, ingredients, price, type }) {
   const [pizzaSize, setPizzaSize] = useState("medium");
   const [pizzaQuantity, setPizzaQuantity] = useState(1);
 
@@ -37,6 +38,7 @@ function Pizza({ name, image, ingredients, price }) {
         <option value="3">3</option>
       </select>
       <button>Add</button>
+      {type === "Custom" && <Link to={`/editPizza/${id}`}>Edit</Link>}
     </li>
   );
 }

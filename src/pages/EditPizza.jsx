@@ -1,14 +1,26 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-function CreatePizza() {
+function EditPizza() {
   const [name, setName] = useState("");
   const [image, setImage] = useState("");
   const [pizzaIngredients, setPizzaIngredients] = useState([]);
   const [ingredients, setIngredients] = useState([]);
 
   const navigate = useNavigate();
+  const { id } = useParams();
+
+  useEffect(() => {
+    axios
+      .get(`https://pizzapp.adaptable.app/pizzas/${id}`)
+      .then(({ data }) => {
+        setName(data.name);
+        setImage(data.image);
+        setIngredients(data.ingredients);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   useEffect(() => {
     axios
@@ -37,7 +49,7 @@ function CreatePizza() {
     const price = 12.49;
 
     axios
-      .post("https://pizzapp.adaptable.app/pizzas", {
+      .put(`https://pizzapp.adaptable.app/pizzas/${id}`, {
         name,
         image: pizzaImage,
         ingredients,
@@ -45,7 +57,7 @@ function CreatePizza() {
         type,
       })
       .then(({ status }) => {
-        if (status === 201) {
+        if (status === 200) {
           navigate("/menu/custom");
         }
       })
@@ -112,9 +124,9 @@ function CreatePizza() {
           ))}
         </select>
       </div>
-      <button>Create pizza</button>
+      <button>Edit pizza</button>
     </form>
   );
 }
 
-export default CreatePizza;
+export default EditPizza;
