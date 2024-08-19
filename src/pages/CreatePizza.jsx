@@ -3,11 +3,10 @@ import { useEffect, useState } from "react";
 
 function CreatePizza() {
   const [name, setName] = useState("");
-  const [image, setImage] = useState();
-  const [ingredients, setIngredients] = useState([]);
-
+  const [image, setImage] = useState("");
   const [pizzaIngredients, setPizzaIngredients] = useState([]);
-
+  const [selectedIngredients, setSelectedIngredients] = useState([0]);
+  console.log(pizzaIngredients);
   useEffect(() => {
     axios
       .get("https://pizzapp.adaptable.app/pizzas")
@@ -17,6 +16,18 @@ function CreatePizza() {
       })
       .catch((err) => console.log(err));
   }, []);
+
+  const handleIngredientSelect = (index, e) => {
+    const ingredient = e.target.value;
+    if (ingredient) {
+      if (index === selectedIngredients.length - 1) {
+        setSelectedIngredients([
+          ...selectedIngredients,
+          selectedIngredients.length,
+        ]);
+      }
+    }
+  };
 
   return (
     <form style={{ padding: "30px" }}>
@@ -41,14 +52,23 @@ function CreatePizza() {
           onChange={(e) => setImage(e.target.value)}
         />
       </div>
-      <select name="ing" id="ing">
-        <option value="">Choose ingredient</option>
-        {pizzaIngredients.map((ing) => (
-          <option key={ing} value={ing}>
-            {ing}
-          </option>
+      <div>
+        <label htmlFor="ingredients">Ingredients: </label>
+        {selectedIngredients.map((_, index) => (
+          <select
+            name={`ingredient-${index}`}
+            id={`ingredient-${index}`}
+            onChange={(e) => handleIngredientSelect(index, e)}
+          >
+            <option value="">Choose ingredient</option>
+            {pizzaIngredients.map((ing) => (
+              <option key={ing} value={ing}>
+                {ing}
+              </option>
+            ))}
+          </select>
         ))}
-      </select>
+      </div>
     </form>
   );
 }
