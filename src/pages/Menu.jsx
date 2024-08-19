@@ -6,39 +6,59 @@ import { useParams } from "react-router-dom";
 
 function Menu() {
   const [menu, setMenu] = useState([]);
+  const [sortedMenu, setSortedMenu] = useState([]);
   const { typeOfPizza } = useParams();
 
   useEffect(() => {
     axios
       .get("https://pizzapp.adaptable.app/pizzas")
       .then(({ data }) => {
-        const unique = new Set(data.map((pizza) => pizza.type));
-        const sortedMenu = [];
-        unique.forEach((pizzaType) => {
-          const pizzaTypeArr = data.filter((pizza) => pizza.type === pizzaType);
-          sortedMenu.push([pizzaType, pizzaTypeArr]);
-        });
-        setMenu(sortedMenu);
+        setMenu(data);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
-        if (typeOfPizza) {
-          setMenu((menu) =>
-            menu.filter(
-              ([pizzaType]) => typeOfPizza === pizzaType.toLowerCase()
-            )
-          );
+  useEffect(() => {
+    const unique = new Set(menu.map((pizza) => pizza.type));
+    const sortedMenuNew = [];
+    unique.forEach((pizzaType) => {
+      const pizzaTypeArr = menu.filter((pizza) => pizza.type === pizzaType);
+      sortedMenuNew.push([pizzaType, pizzaTypeArr]);
+    });
+    setSortedMenu(sortedMenuNew);
+
+    if (typeOfPizza) {
+      setSortedMenu((menu) =>
+        menu.filter(([pizzaType]) => typeOfPizza === pizzaType.toLowerCase())
+      );
+    }
+  }, [typeOfPizza, menu]);
+
+  function handleDeletePizza(id) {
+    axios
+      .delete(`https://pizzapp.adaptable.app/pizzas/${id}`)
+      .then(({ status }) => {
+        if (status === 200) {
+          setMenu((menu) => {
+            const newMenu = [...menu];
+            return newMenu.filter((pizza) => pizza.id !== id);
+          });
         }
       })
       .catch((err) => console.log(err));
-  }, [typeOfPizza]);
+  }
 
   return (
     <div style={{ border: "1px solid black", padding: "30px" }}>
       <h1>Wellcome to the {typeOfPizza} pizzas menu</h1>
       <ul>
-        {menu.map(([pizzaType, pizzaList]) => (
+        {sortedMenu.map(([pizzaType, pizzaList]) => (
           <li key={pizzaType}>
             <h2>{pizzaType}</h2>
-            <PizzaList pizzaList={pizzaList} />
+            <PizzaList
+              pizzaList={pizzaList}
+              onDeletePizza={handleDeletePizza}
+            />
           </li>
         ))}
       </ul>

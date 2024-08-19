@@ -1,7 +1,8 @@
+import axios from "axios";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Pizza({ id, name, image, ingredients, price, type }) {
+function Pizza({ id, name, image, ingredients, price, type, onDeletePizza }) {
   const [pizzaSize, setPizzaSize] = useState("medium");
   const [pizzaQuantity, setPizzaQuantity] = useState(1);
 
@@ -39,6 +40,9 @@ function Pizza({ id, name, image, ingredients, price, type }) {
       </select>
       <button>Add</button>
       {type === "Custom" && <Link to={`/editPizza/${id}`}>Edit</Link>}
+      {type === "Custom" && (
+        <button onClick={() => onDeletePizza(id)}>Delete</button>
+      )}
     </li>
   );
 }
