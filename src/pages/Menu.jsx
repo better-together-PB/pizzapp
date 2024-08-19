@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 
 import axios from "axios";
 import PizzaList from "../components/PizzaList";
+import { useParams } from "react-router-dom";
 
 function Menu() {
   const [menu, setMenu] = useState([]);
+  const { typeOfPizza } = useParams();
 
   useEffect(() => {
     axios
@@ -17,13 +19,21 @@ function Menu() {
           sortedMenu.push([pizzaType, pizzaTypeArr]);
         });
         setMenu(sortedMenu);
+
+        if (typeOfPizza) {
+          setMenu((menu) =>
+            menu.filter(
+              ([pizzaType]) => typeOfPizza === pizzaType.toLowerCase()
+            )
+          );
+        }
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [typeOfPizza]);
 
   return (
-    <div style={{ border: "1px solid black" }}>
-      <h1>MENU!!!!</h1>
+    <div style={{ border: "1px solid black", padding: "30px" }}>
+      <h1>Wellcome to the {typeOfPizza} pizzas menu</h1>
       <ul>
         {menu.map(([pizzaType, pizzaList]) => (
           <li key={pizzaType}>

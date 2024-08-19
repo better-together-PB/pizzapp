@@ -2,16 +2,22 @@ import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import HomePage from "./pages/HomePage";
+import Home from "./pages/Home";
 import Menu from "./pages/Menu";
+import PageNotFound from "./pages/PageNotFound";
+import CreatePizza from "./pages/CreatePizza";
 
 function App() {
   return (
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
+        <Route path="/menu/:typeOfPizza" element={<Menu />} />
+        <Route path="/createPizza" element={<CreatePizza />} />
+
+        <Route path="/*" element={<PageNotFound />} />
       </Routes>
       <Footer />
     </>
