@@ -1,14 +1,13 @@
 import Pizza from "./Pizza";
+import styles from "./PizzaList.module.css";
 
 function PizzaList({ pizzaList, onDeletePizza }) {
   return (
-    <div>
-      <ul>
-        {pizzaList.map((pizza) => (
-          <Pizza key={pizza.id} {...pizza} onDeletePizza={onDeletePizza} />
-        ))}
-      </ul>
-    </div>
+    <ul className={styles.pizzaList}>
+      {pizzaList.map((pizza) => (
+        <Pizza key={pizza.id} {...pizza} onDeletePizza={onDeletePizza} />
+      ))}
+    </ul>
   );
 }
 

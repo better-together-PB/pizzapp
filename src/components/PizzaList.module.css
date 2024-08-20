@@ -1,0 +1,4 @@
+.pizzaList {
+  list-style: none;
+  display: flex;
+}

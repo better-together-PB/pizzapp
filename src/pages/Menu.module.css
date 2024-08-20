@@ -1,0 +1,23 @@
+.main {
+  padding: 90px 60px 45px;
+  background-color: #f3f3f3;
+}
+
+.main h1 {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.menu {
+  list-style: none;
+}
+
+.menuSection {
+  padding-bottom: 60px;
+}
+
+.menuSection h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
