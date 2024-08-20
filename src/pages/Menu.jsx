@@ -49,7 +49,7 @@ function Menu() {
   }
 
   return (
-    <div style={{ border: "1px solid black", padding: "30px" }}>
+    <div style={{ border: "1px solid black", padding: "60px" }}>
       <h1>Wellcome to the {typeOfPizza} pizzas menu</h1>
       <ul>
         {sortedMenu.map(([pizzaType, pizzaList]) => (

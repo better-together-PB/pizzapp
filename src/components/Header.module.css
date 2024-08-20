@@ -22,8 +22,8 @@
 
 .nav {
     display: flex;
-    gap: 100px;
-    font-size: 20px;
+    gap: 60px;
+    font-size: 18px;
 }
 
 .navLink {
