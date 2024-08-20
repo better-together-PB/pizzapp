@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import styles from "./CreatePizza.module.css";
 
 function CreatePizza() {
   const [name, setName] = useState("");
@@ -53,7 +54,7 @@ function CreatePizza() {
   }
 
   return (
-    <form style={{ padding: "30px" }} onSubmit={(e) => handleCreateNewPizza(e)}>
+    <form className={styles.main} onSubmit={(e) => handleCreateNewPizza(e)}>
       <div>
         <label htmlFor="name">Name: </label>
         <input

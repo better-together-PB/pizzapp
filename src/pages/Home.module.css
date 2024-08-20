@@ -1,4 +1,6 @@
 .container {
+    padding: 90px 60px 45px;
+    background-color: #f3f3f3;
     height: 1280px;
     border: 1px solid black;
     background: url(https://img.getimg.ai/generated/img-zZMYRGKzG2qQKYpuxEW8T.jpeg) no-repeat center center;

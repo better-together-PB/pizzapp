@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import styles from "./EditPizza.module.css";
 
 function EditPizza() {
   const [name, setName] = useState("");
@@ -40,7 +41,7 @@ function EditPizza() {
     });
   }
 
-  function handleCreateNewPizza(e) {
+  function handleEditPizza(e) {
     e.preventDefault();
     const type = "Custom";
     const pizzaImage = image
@@ -65,7 +66,7 @@ function EditPizza() {
   }
 
   return (
-    <form style={{ padding: "30px" }} onSubmit={(e) => handleCreateNewPizza(e)}>
+    <form className={styles.main} onSubmit={(e) => handleEditPizza(e)}>
       <div>
         <label htmlFor="name">Name: </label>
         <input

@@ -1,6 +1,7 @@
 .main {
   padding: 90px 60px 45px;
   background-color: #f3f3f3;
+  flex-grow: 1;
 }
 
 .main h1 {
