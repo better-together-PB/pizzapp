@@ -1,5 +1,7 @@
 .pizzaList {
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  gap: 45px;
+  flex-wrap: wrap;
+  gap: 2.666%;
 }

@@ -103,7 +103,6 @@ function EditPizza() {
                   handleChangeSelectedIngredient(e.target.value, index)
                 }
               >
-                <option value="">Choose ingredient</option>
                 {pizzaIngredients.map((ing) => (
                   <option key={ing} value={ing}>
                     {ing}

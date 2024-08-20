@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import PizzaList from "../components/PizzaList";
 import styles from "./Menu.module.css";
@@ -9,6 +9,8 @@ function Menu() {
   const [menu, setMenu] = useState([]);
   const [sortedMenu, setSortedMenu] = useState([]);
   const { typeOfPizza } = useParams();
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -51,7 +53,10 @@ function Menu() {
 
   return (
     <div className={styles.main}>
-      <h1>Welcome to your {typeOfPizza} pizzas</h1>
+      <h1>
+        Welcome to {typeOfPizza === "custom" ? "your" : "our"} {typeOfPizza}{" "}
+        pizzas
+      </h1>
       <ul className={styles.menu}>
         {sortedMenu.map(([pizzaType, pizzaList]) => (
           <li className={styles.menuSection} key={pizzaType}>

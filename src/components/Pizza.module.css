@@ -1,99 +1,100 @@
 .list {
-    width: 23%;
-    border-radius: 13px;
-    background-color: #f3f3f3;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 23%;
+  border-radius: 13px;
+  overflow: hidden;
+  background-color: #f3f3f3;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .img {
-    width: 100%;
-
+  width: 100%;
 }
 
 .pizzaInfo {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
 }
 
 .pizzaName {
-    font-size: 28px;
-    margin-bottom: 10px;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
 .pizzaPrice {
-    font-size: 20px;
-    margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 .pizzaIngredients {
-    font-size: 18px;
-    margin-bottom: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .pizzaActions {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 select {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 button,
 .actionLink {
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-align: center;
-    display: inline-block;
-    text-decoration: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .addButton {
-    background-color: #28a745;
+  background-color: #28a745;
 }
 
 .addButton:hover {
-    background-color: #218838;
+  background-color: #218838;
 }
 
 .editButton {
-    background-color: #f0b300;
-    text-decoration: none;
+  background-color: #f0b300;
+  text-decoration: none;
 }
 
 .editButton:hover {
-    background-color: #e0a800;
-    text-decoration: none;
+  background-color: #e0a800;
+  text-decoration: none;
 }
 
 .deleteButton {
-    background-color: #dc3545;
+  background-color: #dc3545;
 }
 
 .deleteButton:hover {
-    background-color: #c82333;
+  background-color: #c82333;
 }
 
 button a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    height: 100%;
-    width: 100%;
-    line-height: 1;
+  color: white;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 1;
 }
