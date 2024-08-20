@@ -51,7 +51,7 @@ function Menu() {
 
   return (
     <div className={styles.main}>
-      <h1>Wellcome to the {typeOfPizza} pizzas menu</h1>
+      <h1>Welcome to your {typeOfPizza} pizzas</h1>
       <ul className={styles.menu}>
         {sortedMenu.map(([pizzaType, pizzaList]) => (
           <li className={styles.menuSection} key={pizzaType}>

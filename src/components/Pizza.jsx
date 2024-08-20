@@ -24,7 +24,7 @@ function Pizza({ id, name, image, ingredients, price, type, onDeletePizza }) {
         <p className={styles.pizzaPrice}>{pizzaPrice[pizzaSize]} €</p>
         <p className={styles.pizzaIngredients}>{ingredientsStr}</p>
 
-        <div>
+        <div className={styles.pizzaActions}>
           <select
             name="size"
             id="size"
@@ -47,13 +47,23 @@ function Pizza({ id, name, image, ingredients, price, type, onDeletePizza }) {
             <option value="3">3</option>
           </select>
 
-          <button>Add</button>
-          {type === "Custom" && <Link to={`/editPizza/${id}`}>Edit</Link>}
-        </div>
+          <button className={styles.addButton}>Add</button>
 
-        {type === "Custom" && (
-          <button onClick={() => onDeletePizza(id)}>Delete</button>
-        )}
+          {type === "Custom" && (
+            <>
+              <button className={styles.editButton}>
+                <Link to={`/editPizza/${id}`}>Edit</Link>
+              </button>
+
+              <button
+                className={styles.deleteButton}
+                onClick={() => onDeletePizza(id)}
+              >
+                Delete
+              </button>
+            </>
+          )}
+        </div>
       </div>
     </li>
   );
