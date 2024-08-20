@@ -1,65 +1,79 @@
 .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 90px 60px 45px;
-    background-color: #f3f3f3;
-    flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 90px 60px 45px;
+  background-color: #f3f3f3;
+  flex-grow: 1;
+}
+
+.main h2 {
+  font-size: 38px;
+  margin-bottom: 45px;
 }
 
 .main form div {
-    margin-bottom: 15px;
-    width: 100%;
+  margin-bottom: 15px;
 }
 
 .main label {
-    font-size: 25px;
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
+  font-size: 25px;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
 }
 
 .main input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #333;
-    border-radius: 5px;
-    font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 .main select {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #333;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-top: 10px;
-    background-color: #f3f3f3;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+  background-color: #f3f3f3;
 }
 
 .main button {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 28px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 50px;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 28px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 50px;
 }
 
 .main button:hover {
-    background-color: #333;
+  background-color: #333;
 }
 
 .main button:focus {
-    outline: none;
+  outline: none;
 }
 
 .main button:active {
-    background-color: #333;
+  background-color: #333;
+}
+
+.inputsContainer {
+  width: 50%;
+}
+
+.inputsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
 }

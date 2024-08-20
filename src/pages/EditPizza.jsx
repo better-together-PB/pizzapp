@@ -67,65 +67,68 @@ function EditPizza() {
 
   return (
     <form className={styles.main} onSubmit={(e) => handleEditPizza(e)}>
-      <div>
-        <label htmlFor="name">Name: </label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
+      <h2>Edit the pizza for your taste</h2>
+      <div className={styles.inputsContainer}>
+        <div>
+          <label htmlFor="name">Name: </label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="image">Image: </label>
+          <input
+            type="text"
+            name="image"
+            id="image"
+            value={image}
+            onChange={(e) => setImage(e.target.value)}
+          />
+        </div>
+        <div>
+          <label htmlFor="ingredients">Ingredients: </label>
+          {ingredients &&
+            ingredients.map((ingredient, index) => (
+              <select
+                key={index}
+                name={`ingredient-${index}`}
+                id={`ingredient-${index}`}
+                value={ingredient}
+                onChange={(e) =>
+                  handleChangeSelectedIngredient(e.target.value, index)
+                }
+              >
+                <option value="">Choose ingredient</option>
+                {pizzaIngredients.map((ing) => (
+                  <option key={ing} value={ing}>
+                    {ing}
+                  </option>
+                ))}
+              </select>
+            ))}
+          <select
+            name={`ingredient-default`}
+            id={`ingredient-default`}
+            value=""
+            onChange={(e) => {
+              setIngredients((ing) => [...ing, e.target.value]);
+            }}
+          >
+            <option value="">Choose ingredient</option>
+            {pizzaIngredients.map((ing) => (
+              <option key={ing} value={ing}>
+                {ing}
+              </option>
+            ))}
+          </select>
+        </div>
+        <button>Edit pizza</button>
       </div>
-      <div>
-        <label htmlFor="image">Image: </label>
-        <input
-          type="text"
-          name="image"
-          id="image"
-          value={image}
-          onChange={(e) => setImage(e.target.value)}
-        />
-      </div>
-      <div>
-        <label htmlFor="ingredients">Ingredients: </label>
-        {ingredients &&
-          ingredients.map((ingredient, index) => (
-            <select
-              key={index}
-              name={`ingredient-${index}`}
-              id={`ingredient-${index}`}
-              value={ingredient}
-              onChange={(e) =>
-                handleChangeSelectedIngredient(e.target.value, index)
-              }
-            >
-              <option value="">Choose ingredient</option>
-              {pizzaIngredients.map((ing) => (
-                <option key={ing} value={ing}>
-                  {ing}
-                </option>
-              ))}
-            </select>
-          ))}
-        <select
-          name={`ingredient-default`}
-          id={`ingredient-default`}
-          value=""
-          onChange={(e) => {
-            setIngredients((ing) => [...ing, e.target.value]);
-          }}
-        >
-          <option value="">Choose ingredient</option>
-          {pizzaIngredients.map((ing) => (
-            <option key={ing} value={ing}>
-              {ing}
-            </option>
-          ))}
-        </select>
-      </div>
-      <button>Edit pizza</button>
     </form>
   );
 }
