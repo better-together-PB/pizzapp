@@ -45,7 +45,11 @@
 }
 
 .activeNavLink {
-  color: black;
+  background-color: #28a745;
+}
+
+.activeNavLink:hover {
+  background-color: #218838;
 }
 
 .logo {

@@ -9,6 +9,7 @@ import CreatePizza from "./pages/CreatePizza";
 import EditPizza from "./pages/EditPizza";
 
 import styles from "./App.module.css";
+import Cart from "./pages/Cart";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/menu/:typeOfPizza" element={<Menu />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/createPizza" element={<CreatePizza />} />
         <Route path="/editPizza/:id" element={<EditPizza />} />
         <Route path="/*" element={<PageNotFound />} />

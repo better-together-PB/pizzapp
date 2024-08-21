@@ -23,6 +23,10 @@
   margin-bottom: 30px;
 }
 
+.headingPizzaType {
+  color: #28a745;
+}
+
 @media (max-width: 480px) {
   .menuSection h2 {
     text-align: center;

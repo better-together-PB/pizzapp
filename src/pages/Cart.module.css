@@ -1,0 +1,86 @@
+.main {
+  padding: 90px 60px 45px;
+  background-color: #f3f3f3;
+  flex-grow: 1;
+}
+
+.main h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.main h3,
+.main p {
+  font-size: 20px;
+  font-weight: 400;
+}
+.main h3 span {
+  font-size: 24px;
+  font-weight: 600;
+}
+.main p select {
+  font-size: 20px;
+}
+
+.orderItems {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.pizzaItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+
+  border: 3px solid #333;
+  border-radius: 10px;
+  padding: 15px 30px;
+}
+.pizzaName {
+}
+.pizzaSize {
+}
+
+.amountContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.pizzaPrice {
+}
+
+.decreaseAmount,
+.increaseAmout,
+.removeBtn {
+  color: #fff;
+}
+
+.increaseAmout,
+.decreaseAmount {
+  font-size: 32px;
+  padding: 0 10px;
+}
+
+.decreaseAmount {
+  background-color: #f0b300;
+}
+.decreaseAmount:hover {
+  background-color: #e0a800;
+}
+
+.increaseAmout {
+  background-color: #28a745;
+}
+.increaseAmout:hover {
+  background-color: #218838;
+}
+
+.removeBtn {
+  background-color: #dc3545;
+}
+.removeBtn:hover {
+  background-color: #c82333;
+}

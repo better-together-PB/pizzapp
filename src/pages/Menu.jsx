@@ -63,8 +63,8 @@ function Menu() {
   return (
     <div className={styles.main}>
       <h1>
-        Welcome to {typeOfPizza === "custom" ? "your" : "our"} {typeOfPizza}{" "}
-        pizzas
+        Welcome to {typeOfPizza === "custom" ? "your" : "our"}{" "}
+        <span className={styles.headingPizzaType}>{typeOfPizza}</span> pizzas
       </h1>
       <ul className={styles.menu}>
         {sortedMenu.map(([pizzaType, pizzaList]) => (
