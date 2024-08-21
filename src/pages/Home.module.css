@@ -1,38 +1,41 @@
 .container {
-    padding: 90px 60px 45px;
-    background-color: #f3f3f3;
-    height: 1280px;
-    border: 1px solid black;
-    background: url(https://img.getimg.ai/generated/img-zZMYRGKzG2qQKYpuxEW8T.jpeg) no-repeat center center;
-    background-size: cover;
-    background-position: center top;
-    color: red;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    overflow: hidden;
+  padding: 90px 60px 45px;
+  border: 1px solid black;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://img.getimg.ai/generated/img-zZMYRGKzG2qQKYpuxEW8T.jpeg)
+      no-repeat center center;
+  background-size: cover;
+  background-position: center center;
+  flex-grow: 1;
+}
+
+.container h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 54px;
+  margin-top: 60px;
 }
 
 @media (max-width: 1490px) {
-    .container {
-        background-position: center center;
-    }
+  .container {
+    background-position: center center;
+  }
 }
 
 @media (max-width: 1210px) {
-    .container {
-        background-position: center center;
-    }
+  .container {
+    background-position: center center;
+  }
 }
 
 @media (max-width: 920px) {
-    .container {
-        background-position: center center;
-    }
+  .container {
+    background-position: center center;
+  }
 }
 
 @media (max-width: 480px) {
-    .container {
-        background-position: center center;
-    }
+  .container {
+    background-position: center center;
+  }
 }

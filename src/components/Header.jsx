@@ -29,7 +29,7 @@ function Header() {
               : styles.navLink
           }
         >
-          All
+          Menu
         </NavLink>
         <NavLink
           to="/menu/premium"

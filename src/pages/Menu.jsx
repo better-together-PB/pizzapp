@@ -35,6 +35,15 @@ function Menu() {
         menu.filter(([pizzaType]) => typeOfPizza === pizzaType.toLowerCase())
       );
     }
+
+    const validParams = sortedMenuNew.map((el) => el[0].toLowerCase());
+    if (
+      !validParams.includes(typeOfPizza) &&
+      typeOfPizza !== undefined &&
+      [...unique].length
+    ) {
+      navigate(`/pageNotFound`);
+    }
   }, [typeOfPizza, menu]);
 
   function handleDeletePizza(id) {
