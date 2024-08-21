@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
+import Cart from "./Cart";
 
 function Header() {
   return (
@@ -83,9 +84,7 @@ function Header() {
           Create your pizza
         </NavLink>
       </nav>
-      <div className={styles.cartIcon} data-items="9999+">
-        🛒
-      </div>
+      <Cart />
     </header>
   );
 }
