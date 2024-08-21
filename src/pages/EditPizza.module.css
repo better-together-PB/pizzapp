@@ -77,3 +77,13 @@
   flex-direction: column;
   gap: 45px;
 }
+
+@media (max-width: 480px) {
+  .main h2 {
+    text-align: center;
+  }
+
+  .inputsContainer {
+    width: 100%;
+  }
+}

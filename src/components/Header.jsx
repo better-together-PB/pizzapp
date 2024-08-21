@@ -83,7 +83,7 @@ function Header() {
           Create your pizza
         </NavLink>
       </nav>
-      <div className={styles.cartIcon} data-items="99+">
+      <div className={styles.cartIcon} data-items="9999+">
         🛒
       </div>
     </header>

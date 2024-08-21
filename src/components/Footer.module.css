@@ -53,47 +53,6 @@
     }
 }
 
-
-@media (max-width: 1210px) {
-    .footer {
-        padding: 1px 1px;
-    }
-
-    .footer p {
-        margin: 1px 0;
-        font-size: 0.8rem;
-    }
-
-
-    .footer a {
-        font-size: 0.9rem;
-    }
-
-    .footer p:last-of-type {
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 920px) {
-    .footer {
-        padding: 1px 1px;
-    }
-
-    .footer p {
-        margin: 1px 0;
-        font-size: 0.8rem;
-    }
-
-
-    .footer a {
-        font-size: 0.8rem;
-    }
-
-    .footer p:last-of-type {
-        font-size: 0.7rem;
-    }
-}
-
 @media (max-width: 480px) {
     .footer {
         padding: 1px 1px;

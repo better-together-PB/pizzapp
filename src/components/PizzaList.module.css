@@ -5,3 +5,9 @@
   flex-wrap: wrap;
   gap: 2.666%;
 }
+
+@media (max-width: 480px) {
+  .pizzaList {
+    flex-direction: column;
+  }
+}

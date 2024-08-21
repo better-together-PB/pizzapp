@@ -98,3 +98,9 @@ button a {
   width: 100%;
   line-height: 1;
 }
+
+@media (max-width: 480px) {
+  .list {
+    width: 100%;
+  }
+}

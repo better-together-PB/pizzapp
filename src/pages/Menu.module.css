@@ -22,3 +22,9 @@
   font-size: 44px;
   margin-bottom: 30px;
 }
+
+@media (max-width: 480px) {
+  .menuSection h2 {
+    text-align: center;
+  }
+}

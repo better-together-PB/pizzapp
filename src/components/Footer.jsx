@@ -8,7 +8,8 @@ function Footer() {
         <a href="https://github.com/better-together-PB/pizzapp" target="_blank">
           GitHub
         </a>{" "}
-        repository for our app Creators{" "}
+        repository for our app <br />
+        Creators{" "}
         <a href="https://github.com/Kisyov92" target="_blank">
           🇧🇬 Atanas Kisyov
         </a>{" "}

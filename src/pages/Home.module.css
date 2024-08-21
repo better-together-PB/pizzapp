@@ -2,8 +2,7 @@
   padding: 90px 60px 45px;
   border: 1px solid black;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(https://img.getimg.ai/generated/img-zZMYRGKzG2qQKYpuxEW8T.jpeg)
-      no-repeat center center;
+    url(https://img.getimg.ai/generated/img-zZMYRGKzG2qQKYpuxEW8T.jpeg) no-repeat center center;
   background-size: cover;
   background-position: center center;
   flex-grow: 1;
@@ -16,26 +15,13 @@
   margin-top: 60px;
 }
 
-@media (max-width: 1490px) {
-  .container {
-    background-position: center center;
-  }
-}
-
-@media (max-width: 1210px) {
-  .container {
-    background-position: center center;
-  }
-}
-
-@media (max-width: 920px) {
-  .container {
-    background-position: center center;
-  }
-}
-
 @media (max-width: 480px) {
   .container {
-    background-position: center center;
+
+    padding: 45px 60px;
+  }
+
+  .container h1 {
+    margin-top: 0;
   }
 }
