@@ -12,6 +12,10 @@ function EditPizza() {
   const navigate = useNavigate();
   const { id } = useParams();
 
+  const basePrice = 7.99;
+  const ingredientsPrice = ingredients.length;
+  const finalPrice = basePrice + ingredientsPrice;
+
   useEffect(() => {
     axios
       .get(`https://pizzapp.adaptable.app/pizzas/${id}`)
@@ -130,7 +134,7 @@ function EditPizza() {
             onChange={(e) => {
               setIngredients((ing) => [...ing, e.target.value]);
             }}
-            style={{ marginTop: "10px", width: "100%" }}
+            style={{ marginTop: "10px", width: "100%", marginBottom: "40px" }}
           >
             <option value="">Choose ingredient</option>
             {pizzaIngredients.map((ing) => (
@@ -140,6 +144,9 @@ function EditPizza() {
             ))}
           </select>
         </div>
+        <p className={styles.price}>
+          Price: <strong>{finalPrice}</strong> €
+        </p>
         <button className={styles.submitBtn}>Edit pizza</button>
       </div>
     </form>

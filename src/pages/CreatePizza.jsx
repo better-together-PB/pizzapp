@@ -9,6 +9,10 @@ function CreatePizza() {
   const [pizzaIngredients, setPizzaIngredients] = useState([]);
   const [ingredients, setIngredients] = useState([]);
 
+  const basePrice = 7.99;
+  const ingredientsPrice = ingredients.length;
+  const finalPrice = basePrice + ingredientsPrice;
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -120,7 +124,7 @@ function CreatePizza() {
               onChange={(e) => {
                 setIngredients((ing) => [...ing, e.target.value]);
               }}
-              style={{ marginTop: "10px", width: "100%" }}
+              style={{ marginTop: "10px", width: "100%", marginBottom: "40px" }}
             >
               <option value="">Choose ingredient</option>
               {pizzaIngredients.map((ing) => (
@@ -129,6 +133,9 @@ function CreatePizza() {
                 </option>
               ))}
             </select>
+            <p className={styles.price}>
+              Price: <strong>{finalPrice}</strong> €
+            </p>
           </div>
           <button className={styles.submitBtn}>Create pizza</button>
         </div>
