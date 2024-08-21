@@ -32,19 +32,19 @@
   border: 2px solid #333;
   border-radius: 5px;
   font-size: 16px;
+  flex-grow: 1;
 }
 
 .main select {
-  width: 100%;
   padding: 10px;
   border: 2px solid #333;
   border-radius: 5px;
   font-size: 16px;
-  margin-top: 10px;
   background-color: #f3f3f3;
+  flex-grow: 1;
 }
 
-.main button {
+.main .submitBtn {
   background-color: #333;
   color: white;
   padding: 10px 20px;
@@ -56,15 +56,15 @@
   margin-top: 50px;
 }
 
-.main button:hover {
+.main submitBtn:hover {
   background-color: #333;
 }
 
-.main button:focus {
+.main submitBtn:focus {
   outline: none;
 }
 
-.main button:active {
+.main submitBtn:active {
   background-color: #333;
 }
 
@@ -75,6 +75,17 @@
   gap: 45px;
 }
 
+.optionContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.optionContainer button {
+  background-color: #dc3545;
+  padding: 5px 10px;
+}
 
 @media (max-width: 480px) {
   .main h2 {

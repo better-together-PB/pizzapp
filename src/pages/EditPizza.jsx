@@ -65,6 +65,15 @@ function EditPizza() {
       .catch((err) => console.log(err));
   }
 
+  function handleRemoveIngredient(e, index) {
+    e.preventDefault();
+    setIngredients((ings) => {
+      const newIngredients = [...ings];
+      newIngredients.splice(index, 1);
+      return newIngredients;
+    });
+  }
+
   return (
     <form className={styles.main} onSubmit={(e) => handleEditPizza(e)}>
       <h2>Edit the pizza for your taste</h2>
@@ -94,21 +103,25 @@ function EditPizza() {
           <label htmlFor="ingredients">Ingredients: </label>
           {ingredients &&
             ingredients.map((ingredient, index) => (
-              <select
-                key={index}
-                name={`ingredient-${index}`}
-                id={`ingredient-${index}`}
-                value={ingredient}
-                onChange={(e) =>
-                  handleChangeSelectedIngredient(e.target.value, index)
-                }
-              >
-                {pizzaIngredients.map((ing) => (
-                  <option key={ing} value={ing}>
-                    {ing}
-                  </option>
-                ))}
-              </select>
+              <div key={index} className={styles.optionContainer}>
+                <select
+                  name={`ingredient-${index}`}
+                  id={`ingredient-${index}`}
+                  value={ingredient}
+                  onChange={(e) =>
+                    handleChangeSelectedIngredient(e.target.value, index)
+                  }
+                >
+                  {pizzaIngredients.map((ing) => (
+                    <option key={ing} value={ing}>
+                      {ing}
+                    </option>
+                  ))}
+                </select>
+                <button onClick={(e) => handleRemoveIngredient(e, index)}>
+                  X
+                </button>
+              </div>
             ))}
           <select
             name={`ingredient-default`}
@@ -117,6 +130,7 @@ function EditPizza() {
             onChange={(e) => {
               setIngredients((ing) => [...ing, e.target.value]);
             }}
+            style={{ marginTop: "10px", width: "100%" }}
           >
             <option value="">Choose ingredient</option>
             {pizzaIngredients.map((ing) => (
@@ -126,7 +140,7 @@ function EditPizza() {
             ))}
           </select>
         </div>
-        <button>Edit pizza</button>
+        <button className={styles.submitBtn}>Edit pizza</button>
       </div>
     </form>
   );
