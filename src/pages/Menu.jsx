@@ -5,7 +5,7 @@ import PizzaList from "../components/PizzaList";
 import styles from "./Menu.module.css";
 import axios from "axios";
 
-function Menu() {
+function Menu({ onAddPizzaToCart }) {
   const [menu, setMenu] = useState([]);
   const [sortedMenu, setSortedMenu] = useState([]);
   const { typeOfPizza } = useParams();
@@ -73,6 +73,7 @@ function Menu() {
             <PizzaList
               pizzaList={pizzaList}
               onDeletePizza={handleDeletePizza}
+              onAddPizzaToCart={onAddPizzaToCart}
             />
           </li>
         ))}

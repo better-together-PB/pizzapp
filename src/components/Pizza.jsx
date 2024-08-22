@@ -2,7 +2,16 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Pizza.module.css";
 
-function Pizza({ id, name, image, ingredients, price, type, onDeletePizza }) {
+function Pizza({
+  id,
+  name,
+  image,
+  ingredients,
+  price,
+  type,
+  onDeletePizza,
+  onAddPizzaToCart,
+}) {
   const [pizzaSize, setPizzaSize] = useState("medium");
   const [pizzaQuantity, setPizzaQuantity] = useState(1);
 
@@ -47,7 +56,20 @@ function Pizza({ id, name, image, ingredients, price, type, onDeletePizza }) {
             <option value="3">3</option>
           </select>
 
-          <button className={styles.addButton}>Add</button>
+          <button
+            className={styles.addButton}
+            onClick={() =>
+              onAddPizzaToCart({
+                id,
+                name,
+                price,
+                size: pizzaSize,
+                quantity: pizzaQuantity,
+              })
+            }
+          >
+            Add
+          </button>
 
           {type === "Custom" && (
             <>
