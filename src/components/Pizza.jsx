@@ -49,7 +49,7 @@ function Pizza({
             name="quantity"
             id="quantity"
             value={pizzaQuantity}
-            onChange={(e) => setPizzaQuantity(e.target.value)}
+            onChange={(e) => setPizzaQuantity(+e.target.value)}
           >
             <option value="1">1</option>
             <option value="2">2</option>

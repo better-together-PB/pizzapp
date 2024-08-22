@@ -1,8 +1,8 @@
 import styles from "./CartIcon.module.css";
 
-function Cart() {
+function Cart({ cartItemsQuontity }) {
   return (
-    <div className={styles.cartIcon} data-items="0">
+    <div className={styles.cartIcon} data-items={cartItemsQuontity}>
       🛒
     </div>
   );

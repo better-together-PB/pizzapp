@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Header.module.css";
-import Cart from "./CartIcon";
+import CartIcon from "./CartIcon";
 
-function Header() {
+function Header({ onCangePizzaSizeInCart, cartItemsQuontity }) {
   return (
     <header className={styles.header}>
       <NavLink to="/" className={styles.logo}>
@@ -85,7 +85,7 @@ function Header() {
         </NavLink>
       </nav>
       <NavLink to="/cart">
-        <Cart />
+        <CartIcon cartItemsQuontity={cartItemsQuontity} />
       </NavLink>
     </header>
   );
