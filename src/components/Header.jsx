@@ -81,7 +81,7 @@ function Header({ onCangePizzaSizeInCart, cartItemsQuontity }) {
               : styles.navLink
           }
         >
-          Create your pizza
+          Create pizza
         </NavLink>
       </nav>
       <NavLink to="/cart">
