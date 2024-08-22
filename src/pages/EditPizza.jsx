@@ -51,14 +51,13 @@ function EditPizza() {
     const pizzaImage = image
       ? image
       : "https://bestellen.dominos.de/ManagedAssets/DE/product/PFUN/DE_PFUN_en_hero_12763.png?v1940897205";
-    const price = 12.49;
 
     axios
       .put(`https://pizzapp.adaptable.app/pizzas/${id}`, {
         name,
         image: pizzaImage,
         ingredients,
-        price,
+        price: finalPrice,
         type,
       })
       .then(({ status }) => {
