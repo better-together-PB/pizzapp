@@ -1,8 +1,50 @@
-# React + Vite
+# 🍕 Pizza Ordering App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **Pizza Place**, a single-page application (SPA) built with React and Vite. This app allows customers to choose from a variety of pizzas or create their own custom pizzas, add them to their cart, and place orders seamlessly.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Browse Pizzas:** Explore a diverse menu of pizzas with various toppings and sizes.
+- **Create Your Own Pizza:** Customize your pizza with your choice of crust, toppings, and size. Save your creation to the menu for future orders.
+- **Fully Functional Cart:** Add, remove, and modify pizza orders in the cart before checkout.
+- **Responsive Design:** Optimized for both desktop and mobile devices.
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React, Vite
+- **Styling:** CSS Modules
+- **Routing:** React Router
+
+## 📦 Installation
+
+To get a local copy up and running, follow these simple steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/better-together-PB/pizzapp.git
+   Navigate to the project directory:
+   ```
+
+bash
+Copy code
+cd pizzapp
+Install dependencies:
+
+bash
+Copy code
+npm install
+Start the development server:
+
+bash
+Copy code
+npm run dev
+The app should now be running on http://localhost:5173.
+
+## 🛒 Usage
+
+- **Browse Pizzas:** Browse the available pizzas.
+- **Create Pizzas:** Customize and add your own pizza to the menu.
+- **Cart:** View items in the cart, adjust quantities, or remove items.
+
+- **Demo Link:** https://pizzapp2024.netlify.app/
+- **Project Link:** https://github.com/better-together-PB/pizzapp
