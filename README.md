@@ -20,31 +20,38 @@ Welcome to the **Pizza Place**, a single-page application (SPA) built with React
 To get a local copy up and running, follow these simple steps:
 
 1. **Clone the repository:**
+
    ```bash
    git clone https://github.com/better-together-PB/pizzapp.git
-   Navigate to the project directory:
    ```
 
-bash
-Copy code
+   2. **Navigate to the project directory:**
+
+```bash
 cd pizzapp
-Install dependencies:
 
-bash
-Copy code
+```
+
+3. **Install dependencies:**
+
+```bash
 npm install
-Start the development server:
+```
 
-bash
-Copy code
+4. **Start the development server:**
+
+```bash
 npm run dev
 The app should now be running on http://localhost:5173.
+```
 
 ## 🛒 Usage
 
 - **Browse Pizzas:** Browse the available pizzas.
 - **Create Pizzas:** Customize and add your own pizza to the menu.
 - **Cart:** View items in the cart, adjust quantities, or remove items.
+
+## 🔗 Links
 
 - **Demo Link:** https://pizzapp2024.netlify.app/
 - **Project Link:** https://github.com/better-together-PB/pizzapp
