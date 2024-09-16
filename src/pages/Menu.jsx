@@ -14,7 +14,7 @@ function Menu({ onAddPizzaToCart }) {
 
   useEffect(() => {
     axios
-      .get("https://pizzapp.adaptable.app/pizzas")
+      .get("https://pizzapp-backend.onrender.com/pizzas")
       .then(({ data }) => {
         setMenu(data);
       })
@@ -48,7 +48,7 @@ function Menu({ onAddPizzaToCart }) {
 
   function handleDeletePizza(id) {
     axios
-      .delete(`https://pizzapp.adaptable.app/pizzas/${id}`)
+      .delete(`https://pizzapp-backend.onrender.com/pizzas/${id}`)
       .then(({ status }) => {
         if (status === 200) {
           setMenu((menu) => {

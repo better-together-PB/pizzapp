@@ -18,7 +18,7 @@ function EditPizza() {
 
   useEffect(() => {
     axios
-      .get(`https://pizzapp.adaptable.app/pizzas/${id}`)
+      .get(`https://pizzapp-backend.onrender.com/pizzas/${id}`)
       .then(({ data }) => {
         setName(data.name);
         setImage(data.image);
@@ -29,7 +29,7 @@ function EditPizza() {
 
   useEffect(() => {
     axios
-      .get("https://pizzapp.adaptable.app/pizzas")
+      .get("https://pizzapp-backend.onrender.com/pizzas")
       .then(({ data }) => {
         const allIngredients = data.flatMap((pizza) => pizza.ingredients);
         setPizzaIngredients([...new Set(allIngredients)]);
@@ -53,7 +53,7 @@ function EditPizza() {
       : "https://bestellen.dominos.de/ManagedAssets/DE/product/PFUN/DE_PFUN_en_hero_12763.png?v1940897205";
 
     axios
-      .put(`https://pizzapp.adaptable.app/pizzas/${id}`, {
+      .put(`https://pizzapp-backend.onrender.com/pizzas/${id}`, {
         name,
         image: pizzaImage,
         ingredients,

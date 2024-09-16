@@ -17,7 +17,7 @@ function CreatePizza() {
 
   useEffect(() => {
     axios
-      .get("https://pizzapp.adaptable.app/pizzas")
+      .get("https://pizzapp-backend.onrender.com/pizzas")
       .then(({ data }) => {
         const allIngredients = data.flatMap((pizza) => pizza.ingredients);
         setPizzaIngredients([...new Set(allIngredients)]);
@@ -41,7 +41,7 @@ function CreatePizza() {
       : "https://bestellen.dominos.de/ManagedAssets/DE/product/PFUN/DE_PFUN_en_hero_12763.png?v1940897205";
 
     axios
-      .post("https://pizzapp.adaptable.app/pizzas", {
+      .post("https://pizzapp-backend.onrender.com/pizzas", {
         name,
         image: pizzaImage,
         ingredients,
