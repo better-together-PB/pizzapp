@@ -53,5 +53,5 @@ The app should now be running on http://localhost:5173.
 
 ## 🔗 Links
 
-- **Demo Link:** https://pizzapp2024.netlify.app/
+- **Demo Link:** https://my-pizza-place.netlify.app/
 - **Project Link:** https://github.com/better-together-PB/pizzapp
